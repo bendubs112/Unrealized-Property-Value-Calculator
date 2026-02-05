@@ -55,21 +55,7 @@ Solving this problem requires combinatorial search. With 40+ years of rate perio
 
 ### Historical Rate Data
 
-The calculator contains a complete table of SF Rent Ordinance allowable increases from 1979 to 2026:
-
-```python
-RATES = {
-    '1979-06-13_to_1980-02-29': 0.07,  # 7% - NOT BANKABLE
-    '1980-03-01_to_1981-02-28': 0.07,  # 7% - NOT BANKABLE
-    # ... early periods at 7% ...
-    '1984-03-01_to_1985-02-28': 0.04,  # 4%
-    # ... rates vary by year based on CPI ...
-    '2023-03-01_to_2024-02-29': 0.036, # 3.6%
-    '2024-03-01_to_2025-02-28': 0.017, # 1.7%
-    '2025-03-01_to_2026-02-28': 0.017, # 1.7%
-}
-```
-
+The calculator contains a complete table of SF Rent Ordinance allowable increases from 1979 to 2026.
 Each period is marked as bankable or non-bankable based on whether it starts on or after April 1, 1982.
 
 
@@ -132,13 +118,7 @@ PRUNE_LOWER_FACTOR = 0.92  # Stop if max_possible < target * 0.92
 PRUNE_UPPER_FACTOR = 1.10  # Stop if current_value > target * 1.10
 ```
 
-#### 4. Multi-Stage Pruning
-Pruning checks happen at multiple stages:
-- During initial combination generation
-- At periodic intervals
-- With progressively tighter bounds as the search continues
-
-#### 5. The Chronological Constraint
+#### 4. The Chronological Constraint
 While many combinations could be checked that apply different increases from different years (i.e. applying the rent increase from 1995 and then applying a rent increase from 1985), these rent schedules are useless and hence are not calculated.
 
 ---
@@ -212,10 +192,10 @@ Both tabs offer live-updating output configuration:
 
 ## Installation & Usage
 
-Built with Python 3.8+ using Tkinter for the GUI and standard library modules for all calculations.
+Built with Python 3.8+ using Python standard library modules for all calculations and GUI interface.
 
 **Note:** The source code for this project is proprietary as it was developed under contract. I'm happy to discuss the technical architecture, algorithm design decisions, and implementation challenges in more detail during interviews.
 
-## License
+## Notice
 
 Always verify calculations with official Rent Board resources for legal purposes.
