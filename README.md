@@ -212,50 +212,10 @@ Both tabs offer live-updating output configuration:
 
 ## Installation & Usage
 
-### Requirements
-- Python 3.8+
-- All other libraries used are part of the Python standard library
+Built with Python 3.8+ using Tkinter for the GUI and standard library modules for all calculations.
 
-### Running from Source
-```bash
-# Navigate to the directory containing the files
-cd /path/to/calculator
-
-# Run the GUI
-python3 rent_calculator_gui_tabbed.py
-```
-
-### Command Line Mode
-The core module can also be run directly for command-line usage:
-```bash
-python3 rent_calculator_core_multiprocess.py
-```
-
----
-
-## File Structure
-
-```
-├── rent_calculator_core_multiprocess.py   # Core algorithm and calculation logic
-├── rent_calculator_gui_tabbed.py          # Tkinter GUI application
-└── README.md                               # This file
-```
-
-### Module Dependencies
-
-```
-rent_calculator_gui_tabbed.py
-    └── imports from: rent_calculator_core_multiprocess.py
-            ├── find_rent_increases()
-            ├── find_rent_increases_with_retry()
-            ├── validate_date()
-            ├── RATES (dict)
-            ├── BANKING_START_DATE
-            └── CalculationCancelled (exception)
-```
-
----
+**Note:** The source code for this project is proprietary as it was developed under contract. I'm happy to discuss the technical architecture, algorithm design decisions, and implementation challenges in more detail during interviews.
 
 ## License
 
-This software is provided as-is for calculating SF Rent Ordinance banked increases. Always verify calculations with official Rent Board resources for legal purposes.
+Always verify calculations with official Rent Board resources for legal purposes.
